@@ -6,3 +6,6 @@
 
 #ignore tmp folder
 /tmp
+
+# Silly windows
+Gemfile.lock
