@@ -34,7 +34,7 @@ class HashTagTraderApp < Sinatra::Base
   end
 
   before do
-    pass if request.path_info =~ /^\/(auth|js)\//
+    pass if request.path_info =~ /^\/(auth|css|js)\//
 
     redirect to("/auth/") unless session[:uid]
   end

@@ -24,5 +24,10 @@ describe "routes" do
       get '/js/jquery.min.js'
       last_response.status.must_equal 200
     end
+
+    it "should not redirect css routes" do
+      get '/css/bootstrap.min.css'
+      last_response.status.must_equal 200
+    end
   end
 end
