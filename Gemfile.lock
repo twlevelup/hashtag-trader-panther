@@ -66,6 +66,8 @@ GEM
     rack-protection (1.5.2)
       rack
     rack-ssl-enforcer (0.2.6)
+    rack-test (0.6.2)
+      rack (>= 1.0)
     raindrops (0.13.0)
     rake (10.2.2)
     rb-fsevent (0.9.4)
@@ -105,6 +107,7 @@ DEPENDENCIES
   omniauth
   omniauth-github
   rack-ssl-enforcer
+  rack-test
   rake
   rerun
   sinatra

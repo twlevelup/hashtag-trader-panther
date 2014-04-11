@@ -9,6 +9,7 @@ group :development, :test do
   gem 'minitest', '<5.0.0'
   gem 'guard'
   gem 'guard-minitest'
+  gem 'rack-test'
 end
 
 gem 'sinatra'

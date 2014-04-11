@@ -34,15 +34,14 @@ class HashTagTraderApp < Sinatra::Base
   end
 
   before do
-    pass if request.path_info =~ /^\/(auth|js|css)\//
+    pass if request.path_info =~ /^\/(auth|js)\//
 
     redirect to("/auth/") unless session[:uid]
   end
 
 
   register Sinatra::Twitter::Bootstrap::Assets
-  
+
   register HashTagTrader::Routes::Index
   register HashTagTrader::Routes::Authorization
 end
-
