@@ -16,7 +16,7 @@ module HashTagTrader
         app.get '/auth/github/callback' do
           session[:uid] = env['omniauth.auth']['uid']
           session[:name] = env['omniauth.auth'][:info][:name]
-	  haml :welcome
+	  redirect to('/')
         end
 
 	app.get '/auth/failure' do
