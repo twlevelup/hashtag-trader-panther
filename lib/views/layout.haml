@@ -18,28 +18,10 @@
               %li.active
                 %a{href: "#"} Register
               %li
-                %a{href: "#"} Login
+                %a{href: "/auth/github"} Login
 
   %br/             
 
-.container{style: "width: 25%;"}
-  .row
-    .col-md-6.col-md-offset-3
-      .well.well-sm
-        %form.form-horizontal{action: "", method: "post"}
-          %fieldset
-            %legend.text-center Sign In
-            / Name input
-            %center
-              .form-group
-              %label{:for => "exampleInputEmail1"} Username or Email
-              %input#exampleInputEmail1.form-control{:placeholder => "Enter email", :style => "border-radius:0px", :type => "text"}
-              .form-group
-                %br/
-                %label{:for => "exampleInputPassword1"}
-                  Password
-                  %a{:href => "/sessions/forgot_password"} (forgot password)
-                %input#exampleInputPassword1.form-control{:placeholder => "Password", :style => "border-radius:0px", :type => "text"}
-                %br/ 
-                %br/
-                %button.btn.btn-sm.btn-default{:type => "submit"} Sign in
+- container :fluid do
+  - row do
+    = yield
