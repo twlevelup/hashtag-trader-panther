@@ -15,11 +15,14 @@
           / Everything you want hidden at 940px or less, place within here
           .nav-collapse.collapse
             %ul.nav.pull-right
-              %li.active
-                %a{href: "#"} Register
-              %li
-                %a{href: "/auth/github"} Login
-
+              -if session[:name]
+                %li
+                  %a{href: "/logout"} Logout
+              - else
+                %li.active
+                  %a{href: "#"} Register
+                %li
+                  %a{href: "/auth/github"} Login	      
   %br/             
 
 - container :fluid do

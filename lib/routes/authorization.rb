@@ -23,6 +23,12 @@ module HashTagTrader
 	  flash[:notice] = params[:message]
 	  redirect to('/')
 	end
+	
+	app.get '/logout' do
+	  session[:uid] = nil
+	  session[:name] = nil
+   	  haml :logout
+	end
       end
     end
   end
