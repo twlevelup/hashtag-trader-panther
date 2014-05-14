@@ -1,1 +1,66 @@
-%h1 Welcome To registration Form
+%h1 This is registeration page.
+
+%br/
+%br/
+
+
+%form.form-horizontal
+  .control-group
+    %label.control-label{for: "inputEmail"} Email
+    .controls
+      %input#inputEmail{placeholder: "Email", type: "text"}/
+  .control-group
+    %label.control-label{for: "inputPassword"} Password
+    .controls
+      %input#inputPassword{placeholder: "Password", type: "password"}/
+  .control-group
+    %label.control-label{for: "favoriteCars"} Favorite Cat Breed
+    .controls
+      %label.checkbox.inline
+        %input#inlineCheckbox1{:type => "checkbox", :value => "Abyssinian"}
+          Abyssinian
+      %label.checkbox.inline
+        %input#inlineCheckbox2{:type => "checkbox", :value => "option2"}
+          Aegean Cat
+      %label.checkbox.inline
+        %input#inlineCheckbox3{:type => "checkbox", :value => "option3"}
+          Burmese
+    .controls
+      %label.checkbox.inline
+        %input#inlineCheckbox1{:type => "checkbox", :value => "option3"}
+          Cyprus Cat
+      %label.checkbox.inline
+        %input#inlineCheckbox2{:type => "checkbox", :value => "option3"}
+          Hima
+      %label.checkbox.inline
+        %input#inlineCheckbox3{:type => "checkbox", :value => "option3"}
+          6
+    .controls
+      %label.checkbox.inline
+        %input#inlineCheckbox1{:type => "checkbox", :value => "option3"}
+          4
+      %label.checkbox.inline
+        %input#inlineCheckbox2{:type => "checkbox", :value => "option3"}
+          5
+      %label.checkbox.inline
+        %input#inlineCheckbox3{:type => "checkbox", :value => "option3"}
+          6
+    .controls
+      %label.checkbox.inline
+        %input#inlineCheckbox1{:type => "checkbox", :value => "option3"}
+          4
+      %label.checkbox.inline
+        %input#inlineCheckbox2{:type => "checkbox", :value => "option3"}
+          5
+      %label.checkbox.inline
+        %input#inlineCheckbox3{:type => "checkbox", :value => "option3"}
+          6
+  .control-group
+    .controls
+      %label.checkbox
+        %input{type: "checkbox"}/
+        AT&C
+      %button.btn{type: "submit"} Submit
+
+
+
