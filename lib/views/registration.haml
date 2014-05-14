@@ -16,47 +16,85 @@
   .control-group
     %label.control-label{for: "favoriteCars"} Favorite Cat Breed
     .controls
-      %label.checkbox.inline
-        %input#inlineCheckbox1{:type => "checkbox", :value => "Abyssinian"}
-          Abyssinian
-      %label.checkbox.inline
-        %input#inlineCheckbox2{:type => "checkbox", :value => "Aegean_Cat"}
-          Aegean Cat
-      %label.checkbox.inline
-        %input#inlineCheckbox3{:type => "checkbox", :value => "Burmese"}
-          Burmese
+      %table
+        %tr
+          %td
+            %label.checkbox
+              %input#inlineCheckbox1{:type => "checkbox", :value => "Abyssinian"}
+                Abyssinian
+          %td
+            %label.checkbox
+              %input#inlineCheckbox2{:type => "checkbox", :value => "Aegean_Cat"}
+                Aegean Cat
+          %td
+            %label.checkbox
+              %input#inlineCheckbox3{:type => "checkbox", :value => "Burmese"}
+                Burmese
+        %tr
+          %td
+            %label.checkbox
+              %input#inlineCheckbox4{:type => "checkbox", :value => "Cyprus_Cat"}
+                Cyprus Cat
+          %td
+            %label.checkbox
+              %input#inlineCheckbox5{:type => "checkbox", :value => "Himalayan"}
+                Himalayan
+          %td
+            %label.checkbox
+              %input#inlineCheckbox6{:type => "checkbox", :value => "Korat"}
+                Korat
+        %tr
+          %td
+            %label.checkbox
+              %input#inlineCheckbox7{:type => "checkbox", :value => "LaPerm"}
+                LaPerm
+          %td
+            %label.checkbox
+              %input#inlineCheckbox8{:type => "checkbox", :value => "Munchkin"}
+                Munchkin
+          %td
+            %label.checkbox
+              %input#inlineCheckbox9{:type => "checkbox", :value => "Ragamuffin"}
+                Ragamuffin
+        %tr
+          %td
+            %label.checkbox
+              %input#inlineCheckbox10{:type => "checkbox", :value => "Scttish_Fold"}
+                Scttish Fold
+          %td
+            %label.checkbox
+              %input#inlineCheckbox11{:type => "checkbox", :value => "Snowshoe"}
+                Snowshoe
+          %td
+            %label.checkbox
+              %input#inlineCheckbox12{:type => "checkbox", :value => "Toyger"}
+                Toyger
+  .control-group
+    %label.control-label{for: "userTyoe"} You are a
     .controls
-      %label.checkbox.inline
-        %input#inlineCheckbox4{:type => "checkbox", :value => "Cyprus_Cat"}
-          Cyprus Cat
-      %label.checkbox.inline
-        %input#inlineCheckbox5{:type => "checkbox", :value => "Himalayan"}
-          Himalayan
-      %label.checkbox.inline
-        %input#inlineCheckbox6{:type => "checkbox", :value => "Korat"}
-          Korat
-    .controls
-      %label.checkbox.inline
-        %input#inlineCheckbox7{:type => "checkbox", :value => "LaPerm"}
-          LaPerm
-      %label.checkbox.inline
-        %input#inlineCheckbox8{:type => "checkbox", :value => "Munchkin"}
-          Munchkin
-      %label.checkbox.inline
-        %input#inlineCheckbox9{:type => "checkbox", :value => "Ragamuffin"}
-          Ragamuffin
-    .controls
-      %label.checkbox.inline
-        %input#inlineCheckbox10{:type => "checkbox", :value => "Scttish_Fold"}
-          Scttish Fold
-      %label.checkbox.inline
-        %input#inlineCheckbox11{:type => "checkbox", :value => "Snowshoe"}
-          Snowshoe
-      %label.checkbox.inline
-        %input#inlineCheckbox12{:type => "checkbox", :value => "Toyger"}
-          Toyger
+      %label.radio.inline
+        %input#casual{name: "optionsRadios", type: "radio", value: "casual"}
+          Casual User
+      %label.radio.inline
+        %input#power{name: "optionsRadios", type: "radio", value: "power"}
+          Power User
+        %a#basic-tooltip{"data-animation" => "false", "data-placement" => "right", "data-title" => "Different Type of Users", "data-toggle" => "tooltip", href: "#"} ?
+      :javascript
+        $("#basic-tooltip").tooltip();
   .control-group
     .controls
+      / Button to trigger modal        
+      %a.btn{"data-toggle" => "modal", href: "#myModal", role: "button"}Click to View Terms and Conditions
+      / Modal
+      #myModal.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+        .modal-header
+          %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+          %h3#myModalLabel Terms and Conditions
+        .modal-body
+          %p Still waiting for Terms and Conditions :( . The Body of T&C will be filled here.
+      %br/
+      %br/
       %label.checkbox
-        %input{type: "checkbox"} Remember me
-      %button.btn{type: "submit"} Sign in
+        %input{:type => "checkbox"}
+          Agree Terms and Conditions
+      %button.btn{type: "submit"} Submit
