@@ -8,6 +8,7 @@ require 'haml'
 require_relative 'configuration'
 require_relative 'routes/index'
 require_relative 'routes/authorization'
+require_relative 'routes/registration'
 
 class HashTagTraderApp < Sinatra::Base
   set :root, File.dirname(__FILE__)
@@ -44,4 +45,5 @@ class HashTagTraderApp < Sinatra::Base
 
   register HashTagTrader::Routes::Index
   register HashTagTrader::Routes::Authorization
+  register HashTagTrader::Routes::Registration
 end

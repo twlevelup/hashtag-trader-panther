@@ -4,25 +4,33 @@ module HashTagTrader
       def self.registered(app)
         app.get '/auth/' do
           @configuration = Configuration.new
-          haml :auth
+          haml :auth_before_login
         end
-#test
+
         app.post '/auth/developer/callback' do
           session[:uid] = env['omniauth.auth']['uid']
           session[:name] = env['omniauth.auth'][:info][:name]
           redirect to('/')
         end
 
+
+        app.get '/auth/failure' do
+          flash[:notice] = params[:message]
+          redirect to('/')
+        end
+
+
         app.get '/auth/github/callback' do
           session[:uid] = env['omniauth.auth']['uid']
           session[:name] = env['omniauth.auth'][:info][:name]
-	  redirect to('/')
-        end
+    #redirect to('/github_callback')
 
-	app.get '/auth/failure' do
-	  flash[:notice] = params[:message]
-	  redirect to('/')
-	end
+    #check if the user is already registered within #hashtagTrader
+    #if yes, direct to dashboard
+    #if not, direct to register page
+
+      haml :auth_github_callback
+        end
 	
 	app.get '/logout' do
 	  session[:uid] = nil
