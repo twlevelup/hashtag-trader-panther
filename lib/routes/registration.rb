@@ -6,7 +6,6 @@ module HashTagTrader
           haml :registration
         end
 
-
       end
     end
   end

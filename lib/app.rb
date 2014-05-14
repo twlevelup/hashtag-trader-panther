@@ -6,7 +6,7 @@ require 'rack/ssl-enforcer'
 require 'haml'
 
 require_relative 'configuration'
-require_relative 'routes/index'
+require_relative 'routes/dashboard'
 require_relative 'routes/authorization'
 require_relative 'routes/registration'
 
@@ -43,7 +43,7 @@ class HashTagTraderApp < Sinatra::Base
 
   register Sinatra::Twitter::Bootstrap::Assets
 
-  register HashTagTrader::Routes::Index
+  register HashTagTrader::Routes::Dashboard
   register HashTagTrader::Routes::Authorization
   register HashTagTrader::Routes::Registration
 end
