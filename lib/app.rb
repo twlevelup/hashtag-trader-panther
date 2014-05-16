@@ -1,3 +1,6 @@
+require 'sinatra'
+require 'sinatra/activerecord'
+require './config/environments' #database configuration
 require 'omniauth'
 require 'omniauth-github'
 require 'sinatra/base'
@@ -5,11 +8,12 @@ require 'sinatra/twitter-bootstrap'
 require 'rack/ssl-enforcer'
 require 'haml'
 
+require_relative 'models/testmodel'
+
 require_relative 'configuration'
 require_relative 'routes/dashboard'
 require_relative 'routes/authorization'
 require_relative 'routes/registration'
-
 class HashTagTraderApp < Sinatra::Base
   set :root, File.dirname(__FILE__)
 
@@ -46,4 +50,5 @@ class HashTagTraderApp < Sinatra::Base
   register HashTagTrader::Routes::Dashboard
   register HashTagTrader::Routes::Authorization
   register HashTagTrader::Routes::Registration
+
 end

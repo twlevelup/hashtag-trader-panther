@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  database: panther
+  username: <%= ENV['PG_USER'] %>
+  password: <%= ENV['PG_PASS'] %>
+  host: localhost
+
+production:
+  adapter: postgresql
+  database: panther
+  username: <%= ENV['PG_USER'] %>
+  password: <%= ENV['PG_PASS'] %>
+  host: localhost

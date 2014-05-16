@@ -13,6 +13,9 @@ group :development, :test do
 end
 
 gem 'sinatra'
+gem "activerecord"
+gem "sinatra-activerecord"
+gem "pg"
 gem 'sinatra-twitter-bootstrap', :require => 'sinatra/twitter-bootstrap'
 gem 'haml'
 gem 'omniauth'
