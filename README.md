@@ -4,6 +4,7 @@
 
 Repository for Melb Level Up #HashTagTrader
 
+[Heroku App Link](https://hashtag-trader-panther.herokuapp.com)
 
 ## Setup
 _note: any commands run on the command line are prefixed with `$ ` - you won't need to include the `$ ` when running the command_
