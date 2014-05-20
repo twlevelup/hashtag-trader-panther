@@ -3,7 +3,7 @@
 configure :production, :development do
 
 
-	 db = URI.parse(ENV['HEROKU_POSTGRESQL_COPPER_URL'] || 'postgres:///localhost/panther')
+	 db = URI.parse(ENV['HEROKU_POSTGRESQL_COPPER_URL'] || 'postgres:///panther')
 
 	 ActiveRecord::Base.establish_connection(
 	   :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
