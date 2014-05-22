@@ -23,7 +23,8 @@
                   %a{href: "/auth/github"} Login        
   %br/ 
 
-- container :fluid do
-  - row do
-    = yield
+  %div{:style => "background: rgba(255, 255, 255, 0.8); border-radius:25px; max-width: 1000px; max-height: 1000px; width: 100%;"}/
+  - container :fluid do
+    - row do
+      = yield
 

@@ -9,7 +9,7 @@ require 'rack/ssl-enforcer'
 require 'haml'
 
 require_relative 'models/testmodel'
-
+require_relative 'models/user'
 require_relative 'configuration'
 require_relative 'routes/dashboard'
 require_relative 'routes/authorization'

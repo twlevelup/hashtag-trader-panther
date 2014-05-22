@@ -1,1 +1,18 @@
 %h1 Welcome To Dashboard
+
+/ Nav tabs
+%ul.nav.nav-tabs
+  %li.active
+    %a{"data-toggle" => "tab", :href => "#Dashboard"} Home
+  %li
+    %a{"data-toggle" => "tab", :href => "#Portfolio"} Profile
+  %li
+    %a{"data-toggle" => "tab", :href => "#Search"} Messages
+  %li
+    %a{"data-toggle" => "tab", :href => "#TopTrader"} Settings
+/ Tab panes
+.tab-content
+  #home.tab-pane.fade.in.active Dashboard
+  #profile.tab-pane.fade Portfolio
+  #messages.tab-pane.fade Search
+  #settings.tab-pane.fade TopTrader
