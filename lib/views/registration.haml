@@ -1,4 +1,4 @@
-%h1 This is registeration page.
+%h1= 'Hi, ' + session[:name] + ', you have to register first'
 
 %br/
 %br/
@@ -6,17 +6,9 @@
 
 %form.form-horizontal{ :action=>"/dashboard", :method => "get", :role=> "form"}
   .control-group
-    %label.control-label{for: "inputEmail"} Email
+    %label.control-label{for: "inputUsername"} User name
     .controls
-      %input#inputEmail{placeholder: "Email", type: "text"}/
-  .control-group
-    %label.control-label{for: "inputPassword"} Password
-    .controls
-      %input#inputPassword{placeholder: "Password", type: "password"}/
-  .control-group
-    %label.control-label{for: "ConfirmPassword"} Confirm Password
-    .controls
-      %input#inputPassword{placeholder: "Confirm Password", type: "password"}/
+      %input#inputUsername{placeholder: "User name", type: "text"}
   .control-group
     %label.control-label{for: "favoriteCars"} Favorite Cat Breed
     .controls
