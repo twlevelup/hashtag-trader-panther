@@ -7,12 +7,18 @@
   %li
     %a{"data-toggle" => "tab", :href => "#portfolio"} Portfolio
   %li
-    %a{"data-toggle" => "tab", :href => "#search"} Search
+    %a{"data-toggle" => "tab", :href => "#report"} Report
+  %li
+    %a{"data-toggle" => "tab", :href => "#history"} History
   %li
     %a{"data-toggle" => "tab", :href => "#topTrader"} TopTrader
+  %li
+    %form.navbar-search.frmSearch
+      %input.seach-query{:type=>'text', :placeholder=>'#Hashtag', :id=>'input_search',:maxlength=>"45"}
 / Tab panes
 .tab-content
   #dashboard.tab-pane.fade.in.active Dashboard
   #portfolio.tab-pane.fade Portfolio
-  #search.tab-pane.fade Search
+  #report.tab-pane.fade Report
+  #history.tab-pane.fade History
   #topTrader.tab-pane.fade TopTrader

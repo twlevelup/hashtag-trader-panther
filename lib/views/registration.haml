@@ -14,6 +14,10 @@
     .controls
       %input#inputPassword{placeholder: "Password", type: "password"}/
   .control-group
+    %label.control-label{for: "ConfirmPassword"} Confirm Password
+    .controls
+      %input#inputPassword{placeholder: "Confirm Password", type: "password"}/
+  .control-group
     %label.control-label{for: "favoriteCars"} Favorite Cat Breed
     .controls
       %table
@@ -91,10 +95,15 @@
           %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
           %h3#myModalLabel Terms and Conditions
         .modal-body
-          %p Still waiting for Terms and Conditions :( . The Body of T&C will be filled here.
+          .media
+            %a.pull-left{href: "#"}
+              %img.media-object{alt: "Pic", src: "/images/terms.png"}/
+            .media-body
+              %h4.media-heading Media heading
+              Terms and Condition
       %br/
       %br/
       %label.checkbox
         %input{:type => "checkbox"}
-          Agree Terms and Conditions
+          I Have Read and Agree to The Terms and Conditions
       %button.btn{type: "submit"} Submit
