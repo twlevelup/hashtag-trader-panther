@@ -46,7 +46,6 @@ class HashTagTraderApp < Sinatra::Base
 
 
   register Sinatra::Twitter::Bootstrap::Assets
-
   register HashTagTrader::Routes::Dashboard
   register HashTagTrader::Routes::Authorization
   register HashTagTrader::Routes::Registration

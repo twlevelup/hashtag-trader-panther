@@ -45,7 +45,7 @@ module HashTagTrader
       	app.get '/logout' do
       	  session[:uid] = nil
       	  session[:name] = nil
-         	  haml :logout
+         	haml :logout
       	end
       end
     end
